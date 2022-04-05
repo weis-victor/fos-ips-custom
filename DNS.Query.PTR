@@ -1,0 +1,6 @@
+config ips custom
+    edit "DNS.Query.PTR"
+        set signature "F-SBID( --name \"DNS.Query.PTR\"; --severity info; --service DNS; --flow from_client; --dns.query_type 12; --weight 5;)"
+        set comment "Match DNS Queries of Type PTR"
+    next
+end
