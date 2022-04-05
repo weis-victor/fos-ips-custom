@@ -1,0 +1,8 @@
+config ips custom
+    edit "Bitcoin.tx"
+        set signature "F-SBID( --name \"Bitcoin.tx\"; --severity critical; --service unknown_service; --flow from_client; --dst_port 8333; --patern \"|74 78 00 00 00 00 00 00 00 00 00 00|\"; --distance 24,packet; --within 12,packet; --weight 100;)" 
+        set log enable
+        set action block
+        set comment "Block the Bitcoin Tx command because you are extreme HODLr and never want to spend a single sat"
+    next
+ end
