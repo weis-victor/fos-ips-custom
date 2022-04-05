@@ -1,0 +1,9 @@
+config ips custom
+    edit "Bitcoin.Testnet.tx"
+        set signature "F-SBID( --name \"Bitcoin.Testnet.tx\"; --severity info; --service unknown_service; --flow from_client; --dst_port 18333; --patern \"|74 78 00 00 00 00 00 00 00 00 00 00|\"; --distance 24,packet; --within 12,packet; --weight 100;)" 
+        set log enable
+        set action pass
+        set comment "Use Bitcoin Testnet to test blocking of Bitcoin Tx commands pattern matching"
+    next
+end
+```
