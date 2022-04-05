@@ -1,6 +1,7 @@
 config ips custom
     edit "DNS.Query.PTR.Scan"
         set signature "F-SBID( --name \"DNS.Query.PTR.Scan\"; --severity low; --service DNS; --flow from_client; --dns.query_type 12; --weight 10; --rate 40,60,limit; --track src_ip;)"
+        set log enable
         set action block
         set comment "Match rate-based DNS queries of type pointer"
     next
