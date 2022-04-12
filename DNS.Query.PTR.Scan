@@ -1,3 +1,6 @@
+# This ended up getting included in the official FortiGuard Database in update 20.295 as DNS.PTR.Records.Scan
+# https://fortiguard.fortinet.com/encyclopedia/ips/51391
+
 config ips custom
     edit "DNS.Query.PTR.Scan"
         set signature "F-SBID( --name \"DNS.Query.PTR.Scan\"; --severity low; --service DNS; --flow from_client; --dns.query_type 12; --weight 10; --rate 40,60,limit; --track src_ip;)"
